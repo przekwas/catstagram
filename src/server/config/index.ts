@@ -17,5 +17,8 @@ export default {
 	app: {
 		port: process.env.PORT
 	},
-	jwt: {}
+	jwt: {
+		secret: process.env.JWT_SECRET,
+		expires: process.env.JWT_EXPIRES
+	}
 };

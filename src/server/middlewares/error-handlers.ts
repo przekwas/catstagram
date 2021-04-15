@@ -11,5 +11,5 @@ export function notFoundHandler(req: Request, res: Response, next: NextFunction)
 // global error handler for entire express app
 export function errorHandler(err: HTTPError, req: Request, res: Response, next: NextFunction) {
 	res.status(err.status || 500);
-	res.json({ error: err.message });
+	res.json({ error: err.message.toLowerCase() });
 }

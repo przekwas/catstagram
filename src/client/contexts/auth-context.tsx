@@ -11,6 +11,8 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 		token: localStorage.getItem('token') || null
 	});
 
+	
+
 	return (
 		<AuthContext.Provider value={[authState, setAuthState]}>{children}</AuthContext.Provider>
 	);
